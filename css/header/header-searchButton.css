@@ -1,0 +1,15 @@
+.header__search-button {
+  background-image: url('../../assets/search-2.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+@media (min-width: 480px) {
+  .header__search-button {
+    background-image: url('../../assets/search.svg');
+  }
+}

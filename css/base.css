@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Raleway, sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+
+:root {
+	--white: #FFFFFF;
+	--light-gray: #F5F5F5;
+	--gray: #A2A2A2;
+	--dark-gray: #464646;
+	--light-blue: #EAF2FD;
+	--blue: #2A7AE4;
+}
+
+html {
+	scroll-behavior: smooth;
+}

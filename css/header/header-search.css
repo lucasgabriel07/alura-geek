@@ -1,0 +1,22 @@
+.header__search {
+  order: 1;
+}
+
+@media (min-width: 480px) {
+  .header__search {
+    order: 0;
+    display: flex;
+    align-items: center;
+    background: var(--light-gray);
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin: 0px 32px;
+    width: 272px;
+  }
+
+  @media (min-width: 769px) {
+    .header__search {
+      width: 393px;
+    }
+  }
+}
