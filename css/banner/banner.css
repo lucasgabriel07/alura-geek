@@ -1,0 +1,28 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 78px 16px 16px;
+
+  background-image: url('../../assets/banner-3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 480px) {
+  .banner {
+    background-image: url('../../assets/banner-2.png');
+    padding: 161px 32px 32px;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .banner {
+    background-image: url('../../assets/banner.png');
+    padding: 150px 152px 32px;
+  }
+}

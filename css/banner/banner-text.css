@@ -1,0 +1,13 @@
+.banner__text {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (min-width: 480px) {
+  .banner__text {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

@@ -1,7 +1,6 @@
 .header__login-button {
   color: var(--blue);
   background-color: var(--white);
-  border: 1px solid var(--blue);
   width: 133px;
   height: 40px;
 }
