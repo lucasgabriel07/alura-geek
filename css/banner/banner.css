@@ -24,5 +24,6 @@
   .banner {
     background-image: url('../../assets/banner.png');
     padding: 150px 152px 32px;
+    margin-bottom: 64px;
   }
 }

@@ -1,7 +1,7 @@
 .products__link {
   color: var(--blue);
-  font-size: 14px;
   font-weight: bold;
+  font-size: 14px;
   line-height: 16px;
 }
 
@@ -10,4 +10,11 @@
   margin-left: 4px;
   position: relative;
   top: 2px;
+}
+
+@media (min-width: 480px) {
+  .products__link {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }

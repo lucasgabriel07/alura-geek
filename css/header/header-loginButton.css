@@ -1,12 +1,18 @@
 .header__login-button {
   color: var(--blue);
   background-color: var(--white);
-  width: 133px;
-  height: 40px;
+  padding: 12px 47.5px;
 }
 
 @media (min-width: 480px) {
   .header__login-button {
     margin-left: auto;
+    padding: 12px 64px;
+  }
+}
+
+@media (min-width: 480px) {
+  .header__login-button {
+    padding: 16px 70px;
   }
 }

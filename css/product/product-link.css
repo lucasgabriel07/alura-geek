@@ -4,3 +4,10 @@
   font-size: 14px;
   line-height: 16px;
 }
+
+@media (min-width: 480px) {
+  .product__link {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
