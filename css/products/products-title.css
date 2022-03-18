@@ -1,0 +1,6 @@
+.products__title {
+  color: var(--dark-gray);
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 26px;
+}

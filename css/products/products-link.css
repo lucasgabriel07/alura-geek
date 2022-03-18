@@ -1,0 +1,13 @@
+.products__link {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+.products__link::after {
+  content: url('../../assets/arrow.svg');
+  margin-left: 4px;
+  position: relative;
+  top: 2px;
+}
