@@ -2,3 +2,7 @@
   color: var(--white);
   background-color: var(--blue);
 }
+
+.banner__button:hover {
+  background-color: var(--blue-80);
+}

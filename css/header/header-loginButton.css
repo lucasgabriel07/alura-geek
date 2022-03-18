@@ -4,6 +4,10 @@
   padding: 12px 47.5px;
 }
 
+.header__login-button:hover {
+  background-color: var(--light-blue);
+}
+
 @media (min-width: 480px) {
   .header__login-button {
     margin-left: auto;
