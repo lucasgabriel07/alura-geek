@@ -5,7 +5,7 @@
   gap: 16px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 568px) {
   .footer__links {
     gap: 24px;
     align-items: flex-start;

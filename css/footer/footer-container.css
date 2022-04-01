@@ -10,6 +10,12 @@
 @media (min-width: 480px) {
   .footer__container {
     padding: 32px;
+  }
+}
+
+@media (min-width: 568px) {
+  .footer__container {
+    padding: 32px;
     margin-bottom: 0;
     align-items: flex-start;
     position: relative;
