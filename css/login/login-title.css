@@ -1,0 +1,11 @@
+.login__title {
+    color: var(--dark-gray);
+    font-weight: bold;
+}
+
+@media (min-width: 769px) {   
+    .login__title {
+        font-size: 18px;
+        line-height: 21px;
+    }
+}

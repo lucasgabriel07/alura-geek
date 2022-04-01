@@ -1,0 +1,18 @@
+.login {
+    display: flex;
+    justify-content: center;
+    background-color: var(--light-gray);
+    padding: 75px 0;
+}
+
+@media (min-width: 480px) {
+    .login {
+        padding: 45px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .login {
+        padding: 91px;
+    }
+}
