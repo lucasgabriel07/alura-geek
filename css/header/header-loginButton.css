@@ -8,14 +8,14 @@
   background-color: var(--light-blue);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 640px) {
   .header__login-button {
     margin-left: auto;
     padding: 12px 64px;
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 769px) {
   .header__login-button {
     padding: 16px 70px;
   }

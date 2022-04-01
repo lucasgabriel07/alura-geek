@@ -2,7 +2,7 @@
   order: 1;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 640px) {
   .header__search {
     order: 0;
     display: flex;

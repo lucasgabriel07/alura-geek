@@ -17,7 +17,7 @@
   box-shadow: 0 0 0 30px var(--light-gray) inset;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 640px) {
   .header__search-input {
     display: block;
   }
