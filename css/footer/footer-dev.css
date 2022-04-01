@@ -1,0 +1,9 @@
+.footer__dev {
+  background-color: var(--white);
+  padding: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  align-self: stretch;
+}

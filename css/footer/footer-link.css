@@ -1,9 +1,5 @@
-.footer {
-  background-color: var(--white);
-  padding: 32px;
-}
-
-.footer p {
+.footer__link {
+  color: var(--dark-gray);
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;

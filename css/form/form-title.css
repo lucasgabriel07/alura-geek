@@ -1,0 +1,7 @@
+.form__title {
+  color: var(--dark-gray);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,20 @@
+.form__input {
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  align-self: stretch;
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.form__input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #FFFFFF inset;
+  box-shadow: 0 0 0 30px #FFFFFF inset;
+}
+
+#message {
+  /* height: 82px; */
+  resize: none;
+}

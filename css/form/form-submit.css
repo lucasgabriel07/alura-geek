@@ -1,0 +1,6 @@
+.form__submit {
+  color: var(--white);
+  background-color: var(--blue);
+  padding: 12px 16px;
+  margin-top: 8px;
+}
