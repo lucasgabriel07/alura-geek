@@ -1,8 +1,11 @@
 .form__input {
+  color: var(--dark-gray);
   font-size: 16px;
   line-height: 20px;
   border: none;
   align-self: stretch;
+  position: relative;
+  background-color: transparent;
 }
 
 .form__input:focus {
@@ -14,7 +17,16 @@
   box-shadow: 0 0 0 30px #FFFFFF inset;
 }
 
+.form__input::placeholder {
+  visibility: hidden;
+}
+
+.form__input:not(:placeholder-shown) + .form__label,
+.form__input:focus + .form__label {
+  font-size: 12px;
+  top: 0;
+}
+
 #message {
-  /* height: 82px; */
   resize: none;
 }
