@@ -1,0 +1,12 @@
+.description__text {
+    color: var(--dark-gray);
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media (min-width: 769px) {
+    .description__text {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
