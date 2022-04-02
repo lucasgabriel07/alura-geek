@@ -1,0 +1,49 @@
+.form__drop {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    border: 1px dashed #C8C8C8;
+    gap: 16px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form__drop__container {
+    height: 20px;
+    width: 20px;
+    background-image: url('../../assets/add.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
+
+.form__drop__text {
+    color: #6B6B6B;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.form__drop__text:after {
+    content: 'Adicionar uma imagem para o produto';
+}
+
+@media (min-width: 540px) {
+    .form__drop {
+        width: 254px;
+        height: 152px;
+    }
+
+    .form__drop__container {
+        height: 32px;
+        width: 32px;
+        background-image: url('../../assets/image.svg');
+    }
+
+    .form__drop__text:after {
+        content: 'Arraste para adicionar uma imagem para o produto';
+    }
+}

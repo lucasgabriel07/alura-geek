@@ -1,0 +1,18 @@
+.form__image {
+    display: flex;
+    align-items: center;
+}
+
+.form__image__text {
+    color: var(--dark-gray);
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 8px;
+    display: none;
+}
+
+@media (min-width: 540px) {
+    .form__image__text {
+        display: block;
+    }
+}

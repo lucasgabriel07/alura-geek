@@ -1,0 +1,26 @@
+.form__image-button {
+    color: var(--blue);
+    display: none;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.form__image-button:hover {
+    background-color: var(--light-blue);
+}
+
+.form__image-button:after {
+    content: 'Procure no seu tablet'
+}
+
+@media (min-width: 540px) {
+    .form__image-button {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .form__image-button:after {
+        content: 'Procure no seu computador'
+    }
+}
