@@ -5,3 +5,9 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (min-width: 769px) {
+  .footer {
+    margin-top: 64px;
+  }
+}

@@ -17,6 +17,7 @@
     background-image: url('../../assets/banner-2.png');
     padding: 161px 32px 32px;
     gap: 16px;
+    margin-bottom: 16px;
   }
 }
 
@@ -24,6 +25,6 @@
   .banner {
     background-image: url('../../assets/banner.png');
     padding: 150px 152px 32px;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
 }
