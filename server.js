@@ -8,6 +8,8 @@ server.use(middlewares)
 
 server.use(jsonServer.rewriter({
     '/api/*': '/$1',
+    '/products/:category': '/products?category=:category',
+    '/products/:category/:limit': '/products?category=:category&_limit=:limit'
 }))
 
 server.use(router)

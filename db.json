@@ -3,7 +3,7 @@
     {
       "name": "Produto XYZ",
       "price": 60,
-      "image": "assets/images/star-wars-1",
+      "image": "assets/images/star-wars-1.png",
       "description": "",
       "category": "star wars",
       "id": 1
@@ -12,7 +12,7 @@
       "name": "Produto XYZ",
       "price": 60,
       "description": "",
-      "image": "assets/images/star-wars-2",
+      "image": "assets/images/star-wars-2.png",
       "category": "star wars",
       "id": 2
     },
@@ -20,7 +20,7 @@
       "name": "Produto XYZ",
       "price": 60,
       "description": "",
-      "image": "assets/images/star-wars-3",
+      "image": "assets/images/star-wars-3.png",
       "category": "star wars",
       "id": 3
     },
@@ -28,7 +28,7 @@
       "name": "Produto XYZ",
       "price": 60,
       "description": "",
-      "image": "assets/images/star-wars-4",
+      "image": "assets/images/star-wars-4.png",
       "category": "star wars",
       "id": 4
     },
@@ -36,7 +36,7 @@
       "name": "Produto XYZ",
       "price": 60,
       "description": "",
-      "image": "assets/images/star-wars-5",
+      "image": "assets/images/star-wars-5.png",
       "category": "star wars",
       "id": 5
     },
@@ -44,7 +44,7 @@
       "name": "Produto XYZ",
       "price": 60,
       "description": "",
-      "image": "assets/images/star-wars-6",
+      "image": "assets/images/star-wars-6.png",
       "category": "star wars",
       "id": 6
     },
