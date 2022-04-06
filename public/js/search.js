@@ -5,7 +5,9 @@ const input = document.querySelector('.header__search-input');
 const search = async(event) => {
     event.preventDefault();
     const search = input.value;
-    window.location.href = `produtos.html?search=${search}`;
+    if (search.trim() !== '') {
+        window.location.href = `produtos.html?search=${search}`;
+    }
 }
 
 searchBar.addEventListener('submit', search)

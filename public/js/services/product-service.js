@@ -1,5 +1,5 @@
 async function getProducts(category, limit) {
-    let url = 'http://localhost:3000/api/products';
+    let url = '/api/products';
 
     if (category && limit) {
         url += `/?category=${category}&_limit=${limit}`;
@@ -14,16 +14,16 @@ async function getProducts(category, limit) {
 }
 
 async function getProduct(id) {
-    const response = await fetch(`http://localhost:3000/api/products/${id}`);
+    const response = await fetch(`/api/products/${id}`);
     return response.json();
 }
 
 async function getRelatedProducts(id, limit) {
-    const responseProduct = await fetch (`http://localhost:3000/api/products/${id}`);
+    const responseProduct = await fetch (`/api/products/${id}`);
     const product = await responseProduct.json();
     const category = product.category;
     const response = await fetch(
-        `http://localhost:3000/api/products?category=${category}&_limit=${limit+1}`
+        `/api/products?category=${category}&_limit=${limit+1}`
     );
     const result = await response.json();
 
@@ -34,7 +34,7 @@ async function getRelatedProducts(id, limit) {
 }
 
 function addProduct(product) {
-    return fetch('http://localhost:3000/api/products/', {
+    return fetch('/api/products/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ function addProduct(product) {
 }
 
 async function search(search) {
-    const response = await fetch(`http://localhost:3000/api/products?q=${search}`)
+    const response = await fetch(`/api/products?q=${search}`)
     return response.json();
 }
 
