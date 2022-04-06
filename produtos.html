@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek</title>
+    <title>Produtos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/header/header.css">
     <link rel="stylesheet" href="css/header/header-logo.css">
@@ -18,10 +17,6 @@
     <link rel="stylesheet" href="css/header/header-searchInput.css">
     <link rel="stylesheet" href="css/header/header-searchButton.css">
     <link rel="stylesheet" href="css/header/header-loginButton.css">
-    <link rel="stylesheet" href="css/banner/banner.css">
-    <link rel="stylesheet" href="css/banner/banner-title.css">
-    <link rel="stylesheet" href="css/banner/banner-text.css">
-    <link rel="stylesheet" href="css/banner/banner-button.css">
     <link rel="stylesheet" href="css/products/products.css">
     <link rel="stylesheet" href="css/products/products-container.css">
     <link rel="stylesheet" href="css/products/products-title.css">
@@ -44,6 +39,10 @@
     <link rel="stylesheet" href="css/form/form-label.css">
     <link rel="stylesheet" href="css/form/form-input.css">
     <link rel="stylesheet" href="css/form/form-submit.css">
+    <link rel="stylesheet" href="css/productDescription/productMain.css">
+    <link rel="stylesheet" href="css/productsPage/productsPage-title.css">
+    <link rel="stylesheet" href="css/productsPage/productsPage-container.css">
+    <link rel="stylesheet" href="css/productsPage/list-item.css">
   </head>
 
   <body>
@@ -54,46 +53,15 @@
         <input class="header__search-button" type="submit" value="">
       </form>
       <a href="login.html" class="header__login-button button">Login</a>
-      <button class="header__search-button--mobile"></button>
     </header>
 
-    <form class="header__search--mobile">
-      <input class="header__search-input" type="text" name="search" id="search" placeholder="O que deseja encontrar?">
-      <input class="header__search-button" type="submit" value="">
-    </form>
-
-    <main class="main">
-      <section class="banner">
-        <h2 class="banner__title">Dezembro Promocional</h2>
-        <p class="banner__text">Produtos selecionados com 33% de desconto</p>
-        <a href="#consoles" class="banner__button button">Ver Consoles</a>
-      </section>
-
-      <section class="products" id="star+wars">
-        <div class="products__container">
-          <h2 class="products__title">Star Wars</h2>
-          <a href="produtos.html?category=star+wars" class="products__link">Ver tudo</a>
-        </div>
-        <ul class="products__list"></ul>
-      </section>
-
-      <section class="products" id="consoles">
-        <div class="products__container">
-          <h2 class="products__title">Consoles</h2>
-          <a href="produtos.html?category=consoles" class="products__link">Ver tudo</a>
-        </div>
-        <ul class="products__list"></ul>
-      </section>
-
-      <section class="products" id="diversos">
-        <div class="products__container">
-          <h2 class="products__title">Diversos</h2>
-          <a href="produtos.html?category=diversos" class="products__link">Ver tudo</a>
-        </div>
-        <ul class="products__list"></ul>
+    <main class="product-main">
+      <section class="products products-page__container">
+        <h2 class="products-page__title"></h2>
+        <ul class="products__list products-page__list"></ul>
       </section>
     </main>
-    
+
     <footer class="footer">
       <div class="footer__container">
         <img src="assets/logo.png" alt="Logo da Alura Geek" class="footer__img">
@@ -132,7 +100,9 @@
       </div>
     </footer>
 
-    <script src="js/index.js" type="module"></script>
+    <script src="js/products.js" type="module"></script>
     <script src="js/search.js" type="module"></script>
   </body>
+
+  
 </html>
