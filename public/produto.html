@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/header/header.css">
+    <link rel="stylesheet" href="css/header/header-logo.css">
+    <link rel="stylesheet" href="css/header/header-search.css">
+    <link rel="stylesheet" href="css/header/header-searchInput.css">
+    <link rel="stylesheet" href="css/header/header-searchButton.css">
+    <link rel="stylesheet" href="css/header/header-loginButton.css">
+    <link rel="stylesheet" href="css/products/products.css">
+    <link rel="stylesheet" href="css/products/products-container.css">
+    <link rel="stylesheet" href="css/products/products-title.css">
+    <link rel="stylesheet" href="css/products/products-link.css">
+    <link rel="stylesheet" href="css/products/products-list.css">
+    <link rel="stylesheet" href="css/product/product.css">
+    <link rel="stylesheet" href="css/product/product-img.css">
+    <link rel="stylesheet" href="css/product/product-name.css">
+    <link rel="stylesheet" href="css/product/product-value.css">
+    <link rel="stylesheet" href="css/product/product-link.css">
+    <link rel="stylesheet" href="css/footer/footer.css">
+    <link rel="stylesheet" href="css/footer/footer-container.css">
+    <link rel="stylesheet" href="css/footer/footer-links.css">
+    <link rel="stylesheet" href="css/footer/footer-link.css">
+    <link rel="stylesheet" href="css/footer/footer-form.css">
+    <link rel="stylesheet" href="css/footer/footer-dev.css">
+    <link rel="stylesheet" href="css/form/form-title.css">
+    <link rel="stylesheet" href="css/form/form-fields.css">
+    <link rel="stylesheet" href="css/form/form-field.css">
+    <link rel="stylesheet" href="css/form/form-label.css">
+    <link rel="stylesheet" href="css/form/form-input.css">
+    <link rel="stylesheet" href="css/form/form-submit.css">
+    <link rel="stylesheet" href="css/productDescription/productMain.css">
+    <link rel="stylesheet" href="css/productDescription/productDescription.css">
+    <link rel="stylesheet" href="css/productDescription/productDescription-img.css">
+    <link rel="stylesheet" href="css/productDescription/description.css">
+    <link rel="stylesheet" href="css/productDescription/description-title.css">
+    <link rel="stylesheet" href="css/productDescription/description-value.css">
+    <link rel="stylesheet" href="css/productDescription/description-text.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="./"><img src="assets/logo.png" alt="Logo da AluraGeek" class="header__logo"></a>
+      <form class="header__search">
+        <input class="header__search-input" type="text" name="search" id="search" placeholder="O que deseja encontrar?" >
+        <input class="header__search-button" type="submit" value="">
+      </form>
+      <a href="login.html" class="header__login-button button">Login</a>
+      <button class="header__search-button--mobile"></button>
+    </header>
+
+    <form class="header__search--mobile">
+      <input class="header__search-input" type="text" name="search" id="search" placeholder="O que deseja encontrar?" >
+      <input class="header__search-button" type="submit" value="">
+    </form>
+
+    <main class="product-main">
+      <section class="product-description"></section>
+
+      <section class="products">
+        <div class="products__container">
+          <h2 class="products__title">Produtos similares</h2>
+        </div>
+        <ul class="products__list"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <img src="assets/logo.png" alt="Logo da Alura Geek" class="footer__img">
+        
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Quem somos nós</a></li>
+          <li><a href="#" class="footer__link">Política de privacidade</a></li>
+          <li><a href="#" class="footer__link">Programa de fidelidade</a></li>
+          <li><a href="#" class="footer__link">Nossas lojas</a></li>
+          <li><a href="#" class="footer__link">Quero ser franqueado</a></li>
+          <li><a href="#" class="footer__link">Anuncie aqui</a></li>
+        </ul>
+        
+        <form class="footer__form">
+          <h3 class="form__title">Fale conosco</h3>
+          
+          <div class="form__fields">
+            <div class="form__field">
+              <input type="text" name="Nome" id="name" class="form__input" placeholder="Nome" required>
+              <label for="name" class="form__label">Nome</label>
+            </div>
+            
+            <div class="form__field">
+              <textarea name="Mensagem" id="message" cols="30" rows="3" class="form__input" placeholder="Escreva sua mensagem"></textarea>
+              <label for="message" class="form__label">Escreva sua mensagem</label>
+            </div>
+          </div>
+          
+          <button type="submit" class="form__submit button">Enviar mensagem</button>
+        </form>
+      </div>
+        
+      <div class="footer__dev">
+        <p>Desenvolvido por Lucas Gabriel</p>
+        <p>2021</p>
+      </div>
+    </footer>
+    
+    <script src="js/product-page.js" type="module"></script>
+    <script src="js/search.js" type="module"></script>
+  </body>
+</html>

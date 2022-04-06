@@ -1,0 +1,5 @@
+@media (min-width: 769px) {   
+    .products-page__container {
+        padding: 64px 10% 0;
+    }
+}

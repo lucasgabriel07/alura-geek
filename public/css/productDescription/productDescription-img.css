@@ -1,0 +1,10 @@
+.product-description__img {
+    width: 100%;
+    height: 200px;
+}
+
+@media (min-width: 769px) {
+    .product-description__img {
+        height: 350px;
+    }
+}

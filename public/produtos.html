@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek</title>
+    <title>Produtos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -17,6 +17,16 @@
     <link rel="stylesheet" href="css/header/header-searchInput.css">
     <link rel="stylesheet" href="css/header/header-searchButton.css">
     <link rel="stylesheet" href="css/header/header-loginButton.css">
+    <link rel="stylesheet" href="css/products/products.css">
+    <link rel="stylesheet" href="css/products/products-container.css">
+    <link rel="stylesheet" href="css/products/products-title.css">
+    <link rel="stylesheet" href="css/products/products-link.css">
+    <link rel="stylesheet" href="css/products/products-list.css">
+    <link rel="stylesheet" href="css/product/product.css">
+    <link rel="stylesheet" href="css/product/product-img.css">
+    <link rel="stylesheet" href="css/product/product-name.css">
+    <link rel="stylesheet" href="css/product/product-value.css">
+    <link rel="stylesheet" href="css/product/product-link.css">
     <link rel="stylesheet" href="css/footer/footer.css">
     <link rel="stylesheet" href="css/footer/footer-container.css">
     <link rel="stylesheet" href="css/footer/footer-links.css">
@@ -29,61 +39,32 @@
     <link rel="stylesheet" href="css/form/form-label.css">
     <link rel="stylesheet" href="css/form/form-input.css">
     <link rel="stylesheet" href="css/form/form-submit.css">
-    <link rel="stylesheet" href="css/addProduct/addProduct.css">
-    <link rel="stylesheet" href="css/addProduct/addProduct-form.css">
-    <link rel="stylesheet" href="css/addProduct/form-imageButton.css">
-    <link rel="stylesheet" href="css/addProduct/form-image.css">
-    <link rel="stylesheet" href="css/addProduct/form-title.css">
-    <link rel="stylesheet" href="css/addProduct/form-title.css">
-    <link rel="stylesheet" href="css/addProduct/form-drop.css">
-    <link rel="stylesheet" href="css/addProduct/addButton.css">
-    <link rel="stylesheet" href="css/addProduct/productDescription.css">
-    <link rel="stylesheet" href="css/addProduct/header-menuButton.css">
+    <link rel="stylesheet" href="css/productDescription/productMain.css">
+    <link rel="stylesheet" href="css/productsPage/productsPage-title.css">
+    <link rel="stylesheet" href="css/productsPage/productsPage-container.css">
+    <link rel="stylesheet" href="css/productsPage/list-item.css">
   </head>
 
   <body>
     <header class="header">
       <a href="./"><img src="assets/logo.png" alt="Logo da AluraGeek" class="header__logo"></a>
-      <div class="header__search">
-        <input class="header__search-input" type="text" name="search" id="search" placeholder="O que deseja encontrar?">
-        <div class="header__search-button"></div>
-      </div>
-      <a href="#" class="header__menu-button button">Menu administrador</a>
+      <form class="header__search">
+        <input class="header__search-input" type="text" name="search" id="search" placeholder="O que deseja encontrar?" >
+        <input class="header__search-button" type="submit" value="">
+      </form>
+      <a href="login.html" class="header__login-button button">Login</a>
+      <button class="header__search-button--mobile"></button>
     </header>
 
-    <main>
-      <section class="add-product">
-        <form class="add-product__form">
-          <h2 class="form__title--add">Adicionar novo produto</h2>
-          
-          <div class="form__image">
-            <div class="form__drop">
-              <div class="form__drop__container"></div>
-              <p class="form__drop__text"></p>
-            </div>
-            <p class="form__image__text">Ou</p>
-            <button class="form__image-button button"></button>
-          </div>
-            
-          <div class="form__fields">
-            <div class="form__field">
-              <input type="text" name="produto" id="product-name" class="form__input" placeholder="Nome do produto" required>
-              <label for="product-name" class="form__label">Nome do produto</label>
-            </div>
+    <form class="header__search--mobile">
+      <input class="header__search-input" type="text" name="search" id="search" placeholder="O que deseja encontrar?" >
+      <input class="header__search-button" type="submit" value="">
+    </form>
 
-            <div class="form__field">
-              <input type="number" min="0" value="0" name="preço" id="product-price" class="form__input" placeholder="Preço do produto" required>
-              <label for="product-price" class="form__label">Preço do produto</label>
-            </div>
-            
-            <div class="form__field">
-              <textarea name="descrição" id="product-description" cols="30" rows="3" class="form__input" placeholder="Descrição do produto"></textarea>
-              <label for="product-description" class="form__label">Descrição do produto</label>
-            </div>
-          </div>
-
-          <input type="submit" class="form__submit add-button button" value="Adicionar produto">
-        </form>
+    <main class="product-main">
+      <section class="products products-page__container">
+        <h2 class="products-page__title"></h2>
+        <ul class="products__list products-page__list"></ul>
       </section>
     </main>
 
@@ -124,6 +105,10 @@
         <p>2021</p>
       </div>
     </footer>
-    
+
+    <script src="js/products.js" type="module"></script>
+    <script src="js/search.js" type="module"></script>
   </body>
+
+  
 </html>

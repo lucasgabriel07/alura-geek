@@ -1,0 +1,29 @@
+.header__search-button, .header__search-button--mobile {
+  background-color: inherit;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
+}
+
+.header__search-button {
+  background-image: url('../../assets/search.svg');
+  /* display: none; */
+}
+
+.header__search-button--mobile {
+  background-image: url('../../assets/search-2.svg');
+}
+
+@media (min-width: 640px) {
+  .header__search-button {
+    display: block;
+  }
+
+  .header__search-button--mobile {
+    display: none;
+  }
+}

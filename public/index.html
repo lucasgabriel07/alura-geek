@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/header/header.css">
     <link rel="stylesheet" href="css/header/header-logo.css">
@@ -17,6 +18,10 @@
     <link rel="stylesheet" href="css/header/header-searchInput.css">
     <link rel="stylesheet" href="css/header/header-searchButton.css">
     <link rel="stylesheet" href="css/header/header-loginButton.css">
+    <link rel="stylesheet" href="css/banner/banner.css">
+    <link rel="stylesheet" href="css/banner/banner-title.css">
+    <link rel="stylesheet" href="css/banner/banner-text.css">
+    <link rel="stylesheet" href="css/banner/banner-button.css">
     <link rel="stylesheet" href="css/products/products.css">
     <link rel="stylesheet" href="css/products/products-container.css">
     <link rel="stylesheet" href="css/products/products-title.css">
@@ -39,86 +44,56 @@
     <link rel="stylesheet" href="css/form/form-label.css">
     <link rel="stylesheet" href="css/form/form-input.css">
     <link rel="stylesheet" href="css/form/form-submit.css">
-    <link rel="stylesheet" href="css/productDescription/productMain.css">
-    <link rel="stylesheet" href="css/productDescription/productDescription.css">
-    <link rel="stylesheet" href="css/productDescription/productDescription-img.css">
-    <link rel="stylesheet" href="css/productDescription/description.css">
-    <link rel="stylesheet" href="css/productDescription/description-title.css">
-    <link rel="stylesheet" href="css/productDescription/description-value.css">
-    <link rel="stylesheet" href="css/productDescription/description-text.css">
   </head>
 
   <body>
     <header class="header">
       <a href="./"><img src="assets/logo.png" alt="Logo da AluraGeek" class="header__logo"></a>
-      <div class="header__search">
-        <input class="header__search-input" type="text" name="search" id="search" placeholder="O que deseja encontrar?">
-        <div class="header__search-button"></div>
-      </div>
+      <form class="header__search">
+        <input class="header__search-input" type="text" name="search" id="search" placeholder="O que deseja encontrar?" >
+        <input class="header__search-button" type="submit" value="">
+      </form>
       <a href="login.html" class="header__login-button button">Login</a>
+      <button class="header__search-button--mobile"></button>
     </header>
 
-    <main class="product-main">
-      <section class="product-description">
-        <img src="assets/produto.png" alt="" class="product-description__img">
-        <article class="description">
-            <h1 class="description__title">Produto XYZ</h1>
-            <p class="description__value">R$ 60,00</p>
-            <p class="description__text">
-              Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet 
-              idiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse 
-              distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. 
-              Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec 
-              placeat faucibus, dolorum do. Animi porta anim magnam
-            </p>
-        </article>
+    <form class="header__search--mobile">
+      <input class="header__search-input" type="text" name="search" id="search" placeholder="O que deseja encontrar?" >
+      <input class="header__search-button" type="submit" value="">
+    </form>
+
+    <main class="main">
+      <section class="banner">
+        <h2 class="banner__title">Dezembro Promocional</h2>
+        <p class="banner__text">Produtos selecionados com 33% de desconto</p>
+        <a href="#consoles" class="banner__button button">Ver Consoles</a>
       </section>
 
-      <section class="products">
+      <section class="products" id="star+wars">
         <div class="products__container">
-          <h2 class="products__title">Produtos similares</h2>
+          <h2 class="products__title">Star Wars</h2>
+          <a href="produtos.html?category=star+wars" class="products__link">Ver tudo</a>
         </div>
-        <ul class="products__list">
-          <li class="product">
-            <img src="assets/console-1.png" alt="" class="product__img">
-            <h3 class="product__name">Produto XYZ</h3>
-            <p class="product__value">R$ 60,00</p>
-            <a href="#" class="product__link">Ver produto</a>
-          </li>
-          <li class="product">
-            <img src="assets/star-wars-2.png" alt="" class="product__img">
-            <h3 class="product__name">Produto XYZ</h3>
-            <p class="product__value">R$ 60,00</p>
-            <a href="#" class="product__link">Ver produto</a>
-          </li>
-          <li class="product">
-            <img src="assets/star-wars-3.png" alt="" class="product__img">
-            <h3 class="product__name">Produto XYZ</h3>
-            <p class="product__value">R$ 60,00</p>
-            <a href="#" class="product__link">Ver produto</a>
-          </li>
-          <li class="product">
-            <img src="assets/star-wars-4.png" alt="" class="product__img">
-            <h3 class="product__name">Produto XYZ</h3>
-            <p class="product__value">R$ 60,00</p>
-            <a href="#" class="product__link">Ver produto</a>
-          </li>
-          <li class="product">
-            <img src="assets/star-wars-5.png" alt="" class="product__img">
-            <h3 class="product__name">Produto XYZ</h3>
-            <p class="product__value">R$ 60,00</p>
-            <a href="#" class="product__link">Ver produto</a>
-          </li>
-          <li class="product">
-            <img src="assets/star-wars-6.png" alt="" class="product__img">
-            <h3 class="product__name">Produto XYZ</h3>
-            <p class="product__value">R$ 60,00</p>
-            <a href="#" class="product__link">Ver produto</a>
-          </li>
-        </ul>
+        <ul class="products__list"></ul>
+      </section>
+
+      <section class="products" id="consoles">
+        <div class="products__container">
+          <h2 class="products__title">Consoles</h2>
+          <a href="produtos.html?category=consoles" class="products__link">Ver tudo</a>
+        </div>
+        <ul class="products__list"></ul>
+      </section>
+
+      <section class="products" id="diversos">
+        <div class="products__container">
+          <h2 class="products__title">Diversos</h2>
+          <a href="produtos.html?category=diversos" class="products__link">Ver tudo</a>
+        </div>
+        <ul class="products__list"></ul>
       </section>
     </main>
-
+    
     <footer class="footer">
       <div class="footer__container">
         <img src="assets/logo.png" alt="Logo da Alura Geek" class="footer__img">
@@ -156,6 +131,8 @@
         <p>2021</p>
       </div>
     </footer>
-    
+
+    <script src="js/index.js" type="module"></script>
+    <script src="js/search.js" type="module"></script>
   </body>
 </html>
