@@ -1,4 +1,4 @@
-import { productService } from "./service/product-service.js";
+import { productService } from "./services/product-service.js";
 
 const categorys = ['star+wars', 'consoles', 'diversos'];
 
@@ -8,8 +8,6 @@ for (let category of categorys) {
     
     const numberOfProducts = 6;
     const products = await productService.getProducts(category, numberOfProducts);
-
-    console.log(products);
 
     products.forEach(product => {
         const formatedPrice = product.price.toFixed(2).toString().replace('.', ',');

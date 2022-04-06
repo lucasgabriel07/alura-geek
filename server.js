@@ -7,9 +7,7 @@ const port = 3000
 server.use(middlewares)
 
 server.use(jsonServer.rewriter({
-    '/api/*': '/$1',
-    '/products/:category': '/products?category=:category',
-    '/products/:category/:limit': '/products?category=:category&_limit=:limit'
+    '/api/*': '/$1'
 }))
 
 server.use(router)
