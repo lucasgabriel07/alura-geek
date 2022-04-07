@@ -1,4 +1,4 @@
-.header__search-button, .header__search-button--mobile {
+.header__search-button, .header__search-button--mobile, .header__search-button--close {
   background-color: inherit;
   background-size: cover;
   background-position: center;
@@ -11,19 +11,22 @@
 
 .header__search-button {
   background-image: url('../../assets/search.svg');
-  /* display: none; */
 }
 
 .header__search-button--mobile {
   background-image: url('../../assets/search-2.svg');
 }
 
-@media (min-width: 640px) {
-  .header__search-button {
-    display: block;
-  }
+.header__search-button--close {
+  background-image: url('../../assets/close.svg');
+}
 
-  .header__search-button--mobile {
+.header__search-button--hidden {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .header__search-button--mobile, .header__search-button--close, .header__search-button--shown {
     display: none;
   }
 }

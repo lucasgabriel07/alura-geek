@@ -1,16 +1,15 @@
-.header__search, .header__search--mobile {
-  align-items: center;
+.header__search {
   background: var(--light-gray);
+  align-items: center;
   border-radius: 20px;
-  display: none;
-}
-
-.header__search--mobile {
+  width: 100%;
   padding: 8px;
-  margin: 0 8px 12px;
+  margin-top: 16px;
+  display: none;
+  order: 1;
 }
 
-.header__search--show {
+.header__search--shown {
   display: flex;
 }
 
@@ -20,10 +19,7 @@
     width: 272px;
     padding: 8px 16px;
     margin: 0px 32px;
-  }
-
-  .header__search--mobile, .header__search--show {
-    display: none;
+    order: 0;
   }
 
   @media (min-width: 769px) {

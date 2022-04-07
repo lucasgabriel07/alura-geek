@@ -31,7 +31,11 @@ if (category) {
 }
 
 else if (search) {
+    const searchInput = document.getElementById('search');
+    searchInput.value = search;
+
     const products = await productService.search(search);
+    
     if (products.length === 0) {
         title.innerText = 'Não foram encontrados produtos correspondentes'
     } else if (products.length === 1) {

@@ -1,22 +1,26 @@
 const searchBar = document.querySelector('.header__search');
-const mobileSearchBar = document.querySelector('.header__search--mobile');
 const input = document.querySelector('.header__search-input');
 
-const search = async(event) => {
+searchBar.addEventListener('submit', async(event) => {
     event.preventDefault();
     const search = input.value;
     if (search.trim() !== '') {
         window.location.href = `produtos.html?search=${search}`;
     }
+});
+
+const openButton = document.querySelector('.header__search-button--mobile');
+const closeButton = document.querySelector('.header__search-button--close');
+
+openButton.onclick = () => {
+    console.log('click')
+    searchBar.classList.add('header__search--shown');
+    openButton.classList.add('header__search-button--hidden');
+    closeButton.classList.remove('header__search-button--hidden');
 }
 
-searchBar.addEventListener('submit', search)
-mobileSearchBar.addEventListener('submit', search)
-
-const button = document.querySelector('.header__search-button--mobile');
-
-button.onclick = () => {
-    console.log('ok');
-    mobileSearchBar.classList.add('header__search--show');
-    button.style.visibility = 'hidden';
+closeButton.onclick = () => {
+    searchBar.classList.remove('header__search--shown');
+    closeButton.classList.add('header__search-button--hidden');
+    openButton.classList.remove('header__search-button--hidden');
 }
