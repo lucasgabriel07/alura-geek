@@ -1,4 +1,5 @@
 import { productService } from './services/product-service.js';
+import { getSimilarProducts } from './similar-products.js'; 
 
 const url = new URL(window.location);
 const id = url.searchParams.get('id');
@@ -19,10 +20,10 @@ container.innerHTML = `
 
 // Produtos similares
 
-const relatedProductsContainer = document.querySelector('.products__list');
-const relatedProducts = await productService.getRelatedProducts(id, 6);
+const similarProductsContainer = document.querySelector('.products__list');
+const similarProducts = await getSimilarProducts(product);
 
-relatedProducts.forEach(product => {
+similarProducts.forEach(product => {
     const formatedPrice = product.price.toFixed(2).toString().replace('.', ',');
 
     const item = document.createElement('li');
@@ -33,5 +34,5 @@ relatedProducts.forEach(product => {
         <p class="product__value">R$ ${formatedPrice}</p>
         <a href="?id=${product.id}" class="product__link">Ver produto</a>
     `
-    relatedProductsContainer.appendChild(item);
+    similarProductsContainer.appendChild(item);
 });

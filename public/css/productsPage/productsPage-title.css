@@ -1,20 +1,19 @@
 .products-page__title {
     color: var(--dark-gray);
     font-weight: bold;
-    text-transform: capitalize;
     font-size: 18px;
     margin-bottom: 16px;
 }
 
 @media (min-width: 480px) {
     .products-page__title {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
 @media (min-width: 769px) {
     .products-page__title {
         margin-bottom: 32px;
-        font-size: 32px;
+        font-size: 24px;
     }
 }

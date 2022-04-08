@@ -1,7 +1,6 @@
-import { productService } from './services/product-service.js';
+import { productService } from './services/product-service.js'
 
 const url = new URL(window.location);
-const category = url.searchParams.get('category');
 const search = url.searchParams.get('search');
 
 const container = document.querySelector('.products__list');
@@ -24,30 +23,22 @@ const addProducts = function(products) {
     });
 }
 
-if (category) {
-    title.innerText = category;
-    const products = await productService.getProducts(category);
-    addProducts(products);
-}
-
-else if (search) {
+if (search) {
     const searchInput = document.getElementById('search');
     searchInput.value = search;
 
     const products = await productService.search(search);
     
     if (products.length === 0) {
-        title.innerText = 'Não foram encontrados produtos correspondentes'
+        title.innerText = 'Não foram encontrados produtos correspondentes.'
     } else if (products.length === 1) {
         title.innerText = `1 resultado para "${search}"`;
         addProducts(products);
     } else {
-        title.innerText = `${products.length} resultados para "${search}"`;
+        title.innerText = `${products.length} resultados para "${search}".`;
         addProducts(products);
     }
-}
-
-else {
+} else {
     title.innerText = 'Todos os produtos';
     const products = await productService.getProducts();
     addProducts(products);

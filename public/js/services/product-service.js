@@ -18,21 +18,6 @@ async function getProduct(id) {
     return response.json();
 }
 
-async function getRelatedProducts(id, limit) {
-    const responseProduct = await fetch (`/api/products/${id}`);
-    const product = await responseProduct.json();
-    const category = product.category;
-    const response = await fetch(
-        `/api/products?category=${category}&_limit=${limit+1}`
-    );
-    const result = await response.json();
-
-    // Removendo o próprio produto do resultado
-    const relatedProducts = result.filter(product => product.id != id).slice(0, limit);
-    
-    return relatedProducts;
-}
-
 function addProduct(product) {
     return fetch('/api/products/', {
         method: 'POST',
@@ -51,7 +36,6 @@ async function search(search) {
 export const productService = {
     getProducts,
     getProduct,
-    getRelatedProducts,
     addProduct,
     search
 }

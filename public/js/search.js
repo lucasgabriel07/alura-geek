@@ -13,7 +13,6 @@ const openButton = document.querySelector('.header__search-button--mobile');
 const closeButton = document.querySelector('.header__search-button--close');
 
 openButton.onclick = () => {
-    console.log('click')
     searchBar.classList.add('header__search--shown');
     openButton.classList.add('header__search-button--hidden');
     closeButton.classList.remove('header__search-button--hidden');
