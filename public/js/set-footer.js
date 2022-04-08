@@ -1,6 +1,6 @@
 const footerContent = `
     <div class="footer__container">
-    <img src="assets/logo.png" alt="Logo da Alura Geek" class="footer__img">
+    <a href='./'><img src="assets/logo.png" alt="Logo da Alura Geek" class="footer__img"></a>
 
     <ul class="footer__links">
     <li><a href="#" class="footer__link">Quem somos nós</a></li>
@@ -16,13 +16,14 @@ const footerContent = `
     
     <div class="form__fields">
         <div class="form__field">
-        <input type="text" name="Nome" id="name" class="form__input" placeholder="Nome" required>
+        <input type="text" name="Nome" id="name" class="form__input" placeholder="Nome" required
+        maxlength="40">
         <label for="name" class="form__label">Nome</label>
         </div>
         
         <div class="form__field">
         <textarea name="Mensagem" id="message" cols="30" rows="3" class="form__input" 
-        placeholder="Escreva sua mensagem"></textarea>
+        placeholder="Escreva sua mensagem" required maxlength="120"></textarea>
         <label for="message" class="form__label">Escreva sua mensagem</label>
         </div>
     </div>

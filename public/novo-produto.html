@@ -61,13 +61,13 @@
           <div class="form__fields">
             <div class="form__field">
               <input type="text" name="produto" id="product-name" class="form__input" 
-              placeholder="Nome do produto" required>
+              placeholder="Nome do produto" required maxlength="20">
               <label for="product-name" class="form__label">Nome do produto</label>
             </div>
 
             <div class="form__field">
-              <input type="number" min="0" value="0" name="preço" id="product-price" 
-              class="form__input" placeholder="Preço do produto" required>
+              <input inputmode="numeric" min="0" value="0,00" name="preço" id="product-price" 
+              class="form__input" placeholder="Preço do produto" required step="0.01">
               <label for="product-price" class="form__label">Preço do produto</label>
             </div>
             
@@ -88,5 +88,8 @@
     <script src="js/set-header.js"></script>
     <script src="js/set-footer.js"></script>
     <script src="js/search.js" type="module"></script>
+    <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js">
+    </script>
+    <script src="js/new-product.js"></script>
   </body>
 </html>

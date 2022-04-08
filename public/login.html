@@ -43,12 +43,14 @@
           <h3 class="login__title">Iniciar Sessão</h3>
           
           <div class="form__field">
-            <input type="email" name="email" id="email" class="form__input" placeholder="Escreva seu email" required>
+            <input type="email" name="email" id="email" class="form__input" 
+            placeholder="Escreva seu email" required pattern="[\w.]+@[\w.]+\.[\w.]+">
             <label for="email" class="form__label">Escreva seu email</label>
           </div>
           
           <div class="form__field">
-            <input type="password" name="senha" id="password" class="form__input" placeholder="Escreva sua senha"></textarea>
+            <input type="password" name="senha" id="password" class="form__input" 
+            placeholder="Escreva sua senha" required>
             <label for="password" class="form__label">Escreva sua senha</label>
           </div>
 
