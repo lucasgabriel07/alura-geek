@@ -5,7 +5,7 @@ searchBar.addEventListener('submit', async(event) => {
     event.preventDefault();
     const search = input.value;
     if (search.trim() !== '') {
-        window.location.href = `produtos.html?search=${search}`;
+        window.location.href = `produtos?search=${search}`;
     }
 });
 

@@ -1,0 +1,15 @@
+.admin__button {
+    color: #FFFFFF;
+    background-color: var(--blue);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media (min-width: 769px) {
+    .admin__button {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

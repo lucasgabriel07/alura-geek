@@ -19,7 +19,7 @@ for (let category of categorys) {
             <img src="${product.image}" alt="${product.name}" class="product__img">
             <h3 class="product__name">${product.name}</h3>
             <p class="product__value">R$ ${formatedPrice}</p>
-            <a href="produto.html?id=${product.id}" class="product__link">Ver produto</a>
+            <a href="produto?id=${product.id}" class="product__link">Ver produto</a>
         `
 
         container.appendChild(item);

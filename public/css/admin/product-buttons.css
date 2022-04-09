@@ -1,0 +1,23 @@
+.product__buttons {
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.product__button {
+    background-size: cover;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#delete-button {
+    background-image: url('../../assets/delete.svg')
+}
+
+#edit-button {
+    background-image: url('../../assets/edit.svg')
+}

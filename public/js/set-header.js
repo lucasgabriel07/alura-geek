@@ -5,7 +5,7 @@ const headerContent = `
     placeholder="O que deseja encontrar?" >
     <input class="header__search-button" type="submit" value="">
     </form>
-    <a href="login.html" class="header__login-button button">Login</a>
+    <a href="login" class="header__login-button button">Login</a>
     <button class="header__search-button--mobile"></button>
     <button class="header__search-button--close header__search-button--hidden"></button>
 `
