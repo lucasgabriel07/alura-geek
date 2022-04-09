@@ -1,4 +1,11 @@
 import { userService } from './services/user-service.js';
+import LoginError from './errors/LoginError.js';
+
+const userIsActive = await userService.userIsActive();
+
+if (userIsActive) {
+    window.location.href = 'admin';
+}
 
 const form = document.querySelector('.login__form');
 const emailInput = document.getElementById('email');
@@ -11,14 +18,11 @@ form.addEventListener('submit', async (event) => {
     const password = passwordInput.value;
 
     try {
-        const { accessToken, user } = await userService.login(email, password);
-        localStorage.setItem('token', accessToken);
-        window.location.href = '/admin'
+        await userService.login(email, password);
+        window.location.href = 'admin'
     } catch(error) {
-        alert(error.message)
+        if (error instanceof LoginError) {
+            alert(error.message)
+        }
     }
 });
-
-export function getAccessToken() {
-    return localStorage.setItem('token', accessToken);
-}

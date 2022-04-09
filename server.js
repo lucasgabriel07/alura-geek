@@ -16,7 +16,7 @@ server.use(jsonServer.rewriter({
     '/products': '/664/products/',
     '/products/:id': '/664/products/:id',
     '/users': '/400/users',
-    '/users/:id': '/400/users/:id',
+    '/users/:id': '/640/users/:id',
 }))
 
 server.use(auth);
@@ -40,7 +40,6 @@ server.get('/admin', (req, res) => {
 server.get('/novo-produto', (req, res) => {
     res.sendFile(path.join(path.resolve(), '/public/novo-produto.html'))
 });
-
 
 server.use(router);
 

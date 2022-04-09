@@ -1,0 +1,23 @@
+.header__logout-button {
+    color: #FFFFFF;
+    background-color: #B91010;
+    border: solid 1px #B91010;
+    padding: 12px 47.5px;
+  }
+  
+  .header__logout-button:hover {
+    background-color: #c03b3b;
+  }
+  
+  @media (min-width: 640px) {
+    .header__logout-button {
+      margin-left: auto;
+      padding: 12px 64px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .header__logout-button {
+      padding: 16px 70px;
+    }
+  }

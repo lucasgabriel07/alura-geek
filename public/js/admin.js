@@ -1,8 +1,14 @@
 import { productService } from './services/product-service.js'
+import { userService } from './services/user-service.js'
 
-const button = document.querySelector('.header__login-button');
-button.innerText = 'Admin';
-button.href = '#';
+const userIsActive = await userService.userIsActive();
+
+if (!userIsActive) {
+    window.location.href = 'login';
+}
+
+const button = document.querySelector('.header__logout-button');
+button.addEventListener('click', userService.logout);
 
 const container = document.querySelector('.products__list');
 
