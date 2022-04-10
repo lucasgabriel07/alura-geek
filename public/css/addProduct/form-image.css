@@ -11,6 +11,10 @@
     display: none;
 }
 
+#file {
+    display: none;
+}
+
 @media (min-width: 540px) {
     .form__image__text {
         display: block;

@@ -39,10 +39,21 @@
     <link rel="stylesheet" href="css/addProduct/addButton.css">
     <link rel="stylesheet" href="css/addProduct/productDescription.css">
     <link rel="stylesheet" href="css/addProduct/header-menuButton.css">
+    <link rel="stylesheet" href="css/admin/header-logoutButton.css">
   </head>
 
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <a href="./"><img src="assets/logo.png" alt="Logo da AluraGeek" class="header__logo"></a>
+      <form class="header__search">
+      <input class="header__search-input" type="text" name="search" id="search" 
+      placeholder="O que deseja encontrar?" >
+      <input class="header__search-button" type="submit" value="">
+      </form>
+      <button class="header__logout-button button">Sair</a>
+      <button class="header__search-button--mobile"></button>
+      <button class="header__search-button--close header__search-button--hidden"></button>
+    </header>
     
     <main>
       <section class="add-product">
@@ -55,7 +66,8 @@
               <p class="form__drop__text"></p>
             </div>
             <p class="form__image__text">Ou</p>
-            <button class="form__image-button button"></button>
+            <label for="file" class="form__image-button button"></label>
+            <input type="file" id="file" name="imagem">
           </div>
             
           <div class="form__fields">
@@ -85,11 +97,12 @@
 
     <footer class="footer"></footer>
     
-    <script src="js/set-header.js"></script>
     <script src="js/set-footer.js"></script>
     <script src="js/search.js" type="module"></script>
-    <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js">
+    <script 
+    src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js">
     </script>
-    <script src="js/new-product.js"></script>
+    <script src="js/new-product.js" type="module"></script>
+    <script src="js/file-input.js" type="module"></script>
   </body>
 </html>

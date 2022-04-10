@@ -19,13 +19,17 @@ async function getProduct(id) {
 }
 
 function addProduct(product) {
-    return fetch('/api/products/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(product)
-    });
+    const token = localStorage.getItem('token');
+    if (token) {
+        return fetch('/api/products/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(product)
+        });
+    }
 }
 
 async function search(search) {

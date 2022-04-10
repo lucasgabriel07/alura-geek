@@ -5,9 +5,9 @@ import path from 'path';
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
-server.db = router.db
+server.db = router.db;
 
 server.use(middlewares);
 
@@ -17,7 +17,7 @@ server.use(jsonServer.rewriter({
     '/products/:id': '/664/products/:id',
     '/users': '/400/users',
     '/users/:id': '/640/users/:id',
-}))
+}));
 
 server.use(auth);
 
@@ -30,19 +30,19 @@ server.get('/produtos', (req, res) => {
 });
 
 server.get('/produto', (req, res) => {
-    res.sendFile(path.join(path.resolve(), '/public/produto.html'))
+    res.sendFile(path.join(path.resolve(), '/public/produto.html'));
 });
 
 server.get('/admin', (req, res) => {
-    res.sendFile(path.join(path.resolve(), '/public/admin.html'))
+    res.sendFile(path.join(path.resolve(), '/public/admin.html'));
 });
 
 server.get('/novo-produto', (req, res) => {
-    res.sendFile(path.join(path.resolve(), '/public/novo-produto.html'))
+    res.sendFile(path.join(path.resolve(), '/public/novo-produto.html'));
 });
 
 server.use(router);
 
 server.listen(port, () => {
-    console.log(`🚀 Server running on port ${port}`);
-})
+    console.log(`🚀 Server running on PORT ${port}`);
+});
