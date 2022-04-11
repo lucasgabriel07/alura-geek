@@ -44,6 +44,13 @@ if (userIsActive) {
         });
     });
 
+    editButtons.forEach(button => {
+        button.addEventListener('click', async () => {
+            const id = button.dataset.id;
+            window.location.href = `editar-produto?id=${id}`;
+        })
+    })
+
 } else {
     window.location.href = 'login';
 }

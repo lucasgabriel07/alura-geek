@@ -73,7 +73,9 @@ async function logout() {
                 active: false
             })
         });
-
+        
+        localStorage.removeItem('token');
+        localStorage.removeItem('user_id');
         window.location.href = 'login';
     }
 }

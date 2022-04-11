@@ -78,6 +78,46 @@ function deleteProduct(id) {
     }
 }
 
+async function editProduct(product) {
+    const token = localStorage.getItem('token');
+    if (token) {
+        const id = product.id;
+        
+        // Se a imagem for alterada, virá em base 64
+        if (product.image.includes('base64')) {
+            // Salvando nova imagem no server
+            const file = product.image;
+    
+            const res = await fetch('/products/upload-file', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        file: file,
+                        productId: id
+                    })
+                }
+            );
+
+            // Atualizando url da imagem
+            const newPath = await res.text();
+            product.image = newPath;
+        }
+        
+        // Editando produto
+        await fetch(`/api/products/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(product)
+        });
+    }       
+}
+
 async function search(search) {
     const response = await fetch(`/api/products?q=${search}`)
     return response.json();
@@ -88,5 +128,6 @@ export const productService = {
     getProduct,
     addProduct,
     deleteProduct,
+    editProduct,
     search
 }

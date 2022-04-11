@@ -67,6 +67,10 @@ server.get('/novo-produto', (req, res) => {
     res.sendFile(path.join(path.resolve(), '/public/novo-produto.html'));
 });
 
+server.get('/editar-produto', (req, res) => {
+    res.sendFile(path.join(path.resolve(), '/public/editar-produto.html'));
+});
+
 server.use(router);
 
 server.listen(port, () => {
