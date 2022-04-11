@@ -27,6 +27,10 @@ dropZone.ondragover = (event) => {
     event.preventDefault();
 }
 
+dropZone.addEventListener('click', () => {
+    input.click();
+})
+
 input.addEventListener('change', () => {
     const file = input.files[0];
     preview(file);

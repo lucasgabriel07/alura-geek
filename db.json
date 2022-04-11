@@ -150,7 +150,7 @@
       "email": "lucas@email.com",
       "password": "$2a$10$WwYM/REyaqjYsGodKq6Q6.JT/DFUqRXyznXFUrUyf24fK2o4wzGTq",
       "name": "Lucas",
-      "active": false,
+      "active": true,
       "id": 1
     }
   ]

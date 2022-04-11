@@ -18,16 +18,62 @@ async function getProduct(id) {
     return response.json();
 }
 
-function addProduct(product) {
+async function addProduct(product) {
     const token = localStorage.getItem('token');
     if (token) {
-        return fetch('/api/products/', {
+        const res = await fetch('/api/products/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify(product)
+        });
+
+        const createdProduct = await res.json();
+        const file = createdProduct.image;
+        const id = createdProduct.id;
+
+        // Salvando imagem no server
+        
+        const response = await fetch('/products/upload-file', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    file: file,
+                    productId: id
+                })
+            }
+        );
+        
+        // Atualizando url da imagem
+        
+        const newPath = await response.text();
+        
+        await fetch(`/products/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({
+                image: newPath
+            })
+        });
+    }       
+}
+
+function deleteProduct(id) {
+    const token = localStorage.getItem('token');
+    if (token) {
+        return fetch(`/api/products/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
         });
     }
 }
@@ -41,5 +87,6 @@ export const productService = {
     getProducts,
     getProduct,
     addProduct,
+    deleteProduct,
     search
 }

@@ -14,10 +14,10 @@
     cursor: pointer;
 }
 
-#delete-button {
+.product__button--delete {
     background-image: url('../../assets/delete.svg')
 }
 
-#edit-button {
+.product__button--edit {
     background-image: url('../../assets/edit.svg')
 }
